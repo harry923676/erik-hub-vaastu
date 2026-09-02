@@ -1,0 +1,6 @@
+{
+  "name": "ERIK-HUB Vaastu",
+  "description": "Premium AI-powered graphical Vaastu Coach with floor plan intelligence, classical Sanskrit source citations, directional mandala overlays, and Jyotish personalization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
