@@ -100,9 +100,9 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-40 w-full border-b border-stone-200 bg-stone-50/95 backdrop-blur shadow-xs">
       {/* Top Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-4">
+        <div className="flex min-h-16 flex-wrap items-center justify-between gap-3 py-3 sm:h-16 sm:flex-nowrap sm:py-0">
           {/* Brand Identity */}
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-sm font-serif text-xl font-bold tracking-wider">
               🏛️
             </div>
@@ -122,10 +122,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Center Property Switcher */}
-          <div className="relative">
+          <div className="relative order-3 w-full sm:order-none sm:w-auto">
             <button
               onClick={() => setPropertyDropdownOpen(!propertyDropdownOpen)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-stone-300 bg-white text-stone-800 text-sm font-medium hover:border-amber-500 transition-colors shadow-2xs"
+              className="flex w-full items-center justify-between gap-2 rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-left text-sm font-medium text-stone-800 shadow-2xs transition-colors hover:border-amber-500 sm:w-auto"
             >
               <Building2 className="w-4 h-4 text-amber-600" />
               <span className="max-w-[140px] sm:max-w-[200px] truncate">{activeProperty.name}</span>
@@ -256,7 +256,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Right Action Widgets */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex shrink-0 items-center gap-2.5">
             {/* Score Pill */}
             <div
               className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-bold ${getScoreColor(
@@ -303,9 +303,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Primary Tab Navigation */}
-      <div className="border-t border-stone-200/80 bg-white/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex space-x-1 overflow-x-auto py-1 scrollbar-none">
+      <div className="overflow-hidden border-t border-stone-200/80 bg-white/90">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav className="flex max-w-full space-x-1 overflow-x-auto py-1 scrollbar-none">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTabId === item.id;
