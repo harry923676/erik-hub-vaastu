@@ -4,7 +4,7 @@
   "framework": "vite",
   "functions": {
     "api/index.ts": {
-      "includeFiles": ["dist/server.cjs"]
+      "includeFiles": "dist/server.cjs"
     }
   }
 }
