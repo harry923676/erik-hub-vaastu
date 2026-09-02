@@ -102,20 +102,20 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-16 flex-wrap items-center justify-between gap-3 py-3 sm:h-16 sm:flex-nowrap sm:py-0">
           {/* Brand Identity */}
-          <div className="flex min-w-0 flex-1 items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-sm font-serif text-xl font-bold tracking-wider">
+          <div className="flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-600 font-serif text-xl font-bold tracking-wider text-white shadow-sm">
               🏛️
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-serif font-bold text-lg text-stone-900 tracking-tight">
+            <div className="min-w-0 flex-1">
+              <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span className="truncate font-serif text-base font-bold tracking-tight text-stone-900 sm:text-lg">
                   ERIK-HUB Vaastu
                 </span>
-                <span className="px-2 py-0.5 text-[11px] font-medium tracking-wide uppercase bg-amber-100 text-amber-900 rounded-full border border-amber-200">
+                <span className="shrink-0 rounded-full border border-amber-200 bg-amber-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-amber-900 sm:text-[11px]">
                   AI Coach
                 </span>
               </div>
-              <p className="text-xs text-stone-500 font-medium">
+              <p className="truncate text-[11px] font-medium text-stone-500 sm:text-xs">
                 Architectural Intelligence • <span className="text-amber-700 font-semibold">Pawan Paji</span>
               </p>
             </div>
@@ -256,10 +256,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Right Action Widgets */}
-          <div className="flex shrink-0 items-center gap-2.5">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
             {/* Score Pill */}
             <div
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-bold ${getScoreColor(
+              className={`flex items-center gap-1 rounded-full border px-2 py-1 text-[11px] font-bold sm:gap-1.5 sm:px-3 sm:text-xs ${getScoreColor(
                 overallScore
               )}`}
             >
